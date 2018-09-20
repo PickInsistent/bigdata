@@ -37,9 +37,7 @@ public class BloomFilter {
     }
 
     /* 哈希函数类 */
-    public static class SimpleHash
-
-    {
+    public static class SimpleHash {
         private int cap;
         private int seed;
 
@@ -57,5 +55,20 @@ public class BloomFilter {
             }
             return (cap - 1) & result;
         }
+    }
+
+    public static void main(String[] args) {
+        BloomFilter bloomFilter = new BloomFilter();
+        bloomFilter.add("lzp");
+        bloomFilter.add("tyl");
+        bloomFilter.add("dqq");
+        bloomFilter.add("zcm");
+        bloomFilter.add("zkc");
+        if(bloomFilter.contains("jyg")){
+            System.out.println("不存在jyg");
+        } else {
+            System.out.println("不存在jyg");
+        }
+
     }
 }
